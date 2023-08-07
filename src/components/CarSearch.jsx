@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import 'bootswatch/dist/cyborg/bootstrap.min.css'
+
 // import './carStyling.css';
 
 function CarSearch() {
@@ -9,7 +12,7 @@ function CarSearch() {
 
   useEffect(() => {
     fetchData();
-  }, [make, model]); // The useEffect hook will run whenever the 'make' or 'model' state changes
+  }, [make, model]);
 
   const fetchData = async () => {
     const options = {
@@ -37,37 +40,48 @@ function CarSearch() {
   };
 
   return (
-    <div>
-      <div>
-        <input
-          type="text"
-          value={make}
-          onChange={(e) => setMake(e.target.value)}
-          placeholder="Enter car make"
-        />
-        <input
-          type="text"
-          value={model}
-          onChange={(e) => setModel(e.target.value)}
-          placeholder="Enter car model"
-        />
-        <button onClick={fetchData}>Search</button>
+    <div className="container mt-5">
+      <div className="row">
+        <div className="col">
+          <input
+            type="text"
+            value={make}
+            onChange={(e) => setMake(e.target.value)}
+            className="form-control"
+            placeholder='Try "Ford"'
+          />
+        </div>
+        <div className="col">
+          <input
+            type="text"
+            value={model}
+            onChange={(e) => setModel(e.target.value)}
+            className="form-control"
+            placeholder='Try "Fusion"'
+          />
+        </div>
+        <div className="col">
+          <button onClick={fetchData} className="btn btn-primary">
+            Search
+          </button>
+        </div>
       </div>
 
       {carData.length > 0 && (
         <div>
           <h2>Search Results:</h2>
           {carData.map((car, index) => (
-            <div key={index}>
-              <p>Make: {car.make}</p>
-              <p>Model: {car.model}</p>
-              <p>MPG: {car.city_mpg}</p>
-              <p>Drive: {car.drive}</p>
-              <p>Cylinders: {car.cylinders}</p>
-              <p>Car Class: {car.class}</p>
-              <p>Year: {car.year}</p>
-              <p>Fuel Type: {car.fuel_type}</p>
-              <hr />
+            <div key={index} className="card my-3">
+              <div className="card-body">
+                <h2 className="card-text">{car.make}</h2>
+                <h5 className="card-text">{car.model}</h5>
+                <p className="card-text">Year: {car.year}</p>
+                <p className="card-text">MPG: {car.city_mpg}</p>
+                <p className="card-text">Drive: {car.drive}</p>
+                <p className="card-text">Cylinders: {car.cylinders}</p>
+                <p className="card-text">Car Class: {car.class}</p>
+                <p className="card-text">Fuel Type: {car.fuel_type}</p>
+              </div>
             </div>
           ))}
         </div>
