@@ -41,27 +41,22 @@ function CarSearch() {
 
   return (
     <div>
-
       <div>
-        {/* //Make input */}
         <input
           type="text"
           value={make}
           onChange={(e) => setMake(e.target.value)}
           placeholder="Enter car make"
         />
-        {/* //Model input */}
         <input
           type="text"
           value={model}
           onChange={(e) => setModel(e.target.value)}
           placeholder="Enter car model"
         />
-        {/* //Search button */}
         <button onClick={handleSearch}>Search</button>
       </div>
 
-      {/* //Results to get properties data */}
       {carData.length > 0 && (
         <div>
           <h2>Search Results:</h2>
@@ -69,6 +64,12 @@ function CarSearch() {
             <div key={index}>
               <p>Make: {car.make}</p>
               <p>Model: {car.model}</p>
+              <p>MPG: {car.city_mpg}</p> {/* Displaying MPG property */}
+              <p>Drive: {car.drive}</p> {/* Displaying Drive property */}
+              <p>Cylinders: {car.cylinders}</p> {/* Displaying Cylinders property */}
+              <p>Car Class: {car.class}</p> {/* Displaying Car Class property */}
+              <p>Year: {car.year}</p> {/* Displaying Year property */}
+              <p>Fuel Type: {car.fuel_type}</p>
               <hr />
             </div>
           ))}
@@ -76,5 +77,6 @@ function CarSearch() {
       )}
     </div>
   );
-};
-export default CarSearch
+}
+
+export default CarSearch;
