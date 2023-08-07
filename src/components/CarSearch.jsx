@@ -1,13 +1,16 @@
-import React, { useState } from 'react'
-import axios from 'axios'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+// import './carStyling.css';
 
 function CarSearch() {
-  // Setting state for the data
-  const [make, setMake] = useState('')
-  const [model, setModel] = useState('')
-  const [carData, setCarData] = useState([])
+  const [make, setMake] = useState('');
+  const [model, setModel] = useState('');
+  const [carData, setCarData] = useState([]);
 
-  //API Key to get the data
+  useEffect(() => {
+    fetchData();
+  }, [make, model]); // The useEffect hook will run whenever the 'make' or 'model' state changes
+
   const fetchData = async () => {
     const options = {
       method: 'GET',
@@ -33,12 +36,6 @@ function CarSearch() {
     }
   };
 
-  //Search function to get the data
-  const handleSearch = () => {
-    fetchData();
-  };
-
-
   return (
     <div>
       <div>
@@ -54,7 +51,7 @@ function CarSearch() {
           onChange={(e) => setModel(e.target.value)}
           placeholder="Enter car model"
         />
-        <button onClick={handleSearch}>Search</button>
+        <button onClick={fetchData}>Search</button>
       </div>
 
       {carData.length > 0 && (
@@ -64,11 +61,11 @@ function CarSearch() {
             <div key={index}>
               <p>Make: {car.make}</p>
               <p>Model: {car.model}</p>
-              <p>MPG: {car.city_mpg}</p> {/* Displaying MPG property */}
-              <p>Drive: {car.drive}</p> {/* Displaying Drive property */}
-              <p>Cylinders: {car.cylinders}</p> {/* Displaying Cylinders property */}
-              <p>Car Class: {car.class}</p> {/* Displaying Car Class property */}
-              <p>Year: {car.year}</p> {/* Displaying Year property */}
+              <p>MPG: {car.city_mpg}</p>
+              <p>Drive: {car.drive}</p>
+              <p>Cylinders: {car.cylinders}</p>
+              <p>Car Class: {car.class}</p>
+              <p>Year: {car.year}</p>
               <p>Fuel Type: {car.fuel_type}</p>
               <hr />
             </div>
