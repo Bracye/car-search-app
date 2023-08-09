@@ -42,9 +42,9 @@ function CarSearch() {
   };
 
   return (
-    <div className="container mt-5 pt-10 mx-auto">
+    <div className="container mt-5 pt-10 mx-auto" style={{ fontFamily: 'Staatliches, regular' }} >
       <div className="row justify-content-center mb-4">
-        <div className="col-md-4" style={{ fontFamily: 'Staatliches, regular' }}>
+        <div className="col-md-4">
           <input
             type="text"
             value={make}
@@ -53,7 +53,7 @@ function CarSearch() {
             placeholder='Try "Ford"'
           />
         </div>
-        <div className="col-md-4" style={{ fontFamily: 'Staatliches, regular' }}>
+        <div className="col-md-4">
           <input
             type="text"
             value={model}
@@ -66,10 +66,10 @@ function CarSearch() {
 
       {carData.length > 0 && (
         <div>
-          <h3 style={{ fontFamily: 'Staatliches, regular' }}>Car Results:</h3>
+          <h3>Car Results:</h3>
           {carData.map((car, index) => (
             <div key={index} className="card my-3">
-              <div className="card-body d-flex flex-column" style={{ fontFamily: 'Staatliches, regular' }}>
+              <div className="card-body d-flex flex-column">
                 <h1 className="card-text text-center mb-3.5" >{capitalizeFirstLetter(car.make)}</h1>
                 <h2 className="card-text text-center mb-5">{capitalizeFirstLetter(car.model)}</h2>
                 <div className="d-flex justify-content-between fs-5" >
