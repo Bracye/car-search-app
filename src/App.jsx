@@ -5,13 +5,15 @@ import Footer from './components/Footer'
 function App() {
 
   return (
-    <>
-     <div >
-      <h1 className='text-center' style={{ fontFamily: 'Staatliches, regular', textDecoration: 'underline' }}>Car Search App</h1>
+    <div>
+    <header className="text-center py-4">
+        <h1 className="text-center" style={{ fontFamily: 'Staatliches, regular', textDecoration: 'underline' }}>
+          Car Search App
+        </h1>
+      </header>
       <CarSearch />
       <Footer />
      </div>
-    </>
   )
 }
 
