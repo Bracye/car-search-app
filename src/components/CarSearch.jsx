@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootswatch/dist/cyborg/bootstrap.min.css'
-
-// import './carStyling.css';
+import CarImg from './CarImg';
 
 function CarSearch() {
   const [make, setMake] = useState('');
@@ -39,10 +38,10 @@ function CarSearch() {
     }
   };
 
-  return (
-    <div className="container mt-5">
-      <div className="row">
-        <div className="col">
+    return (
+    <div className="container mt-5 pt-10 mx-auto">
+      <div className="row justify-content-center mb-4"> {/* Center the content horizontally */}
+        <div className="col-md-4">
           <input
             type="text"
             value={make}
@@ -51,7 +50,7 @@ function CarSearch() {
             placeholder='Try "Ford"'
           />
         </div>
-        <div className="col">
+        <div className="col-md-4">
           <input
             type="text"
             value={model}
@@ -60,32 +59,29 @@ function CarSearch() {
             placeholder='Try "Fusion"'
           />
         </div>
-        <div className="col">
-          <button onClick={fetchData} className="btn btn-primary">
-            Search
-          </button>
-        </div>
+    
       </div>
 
+
       {carData.length > 0 && (
-        <div>
-          <h2>Search Results:</h2>
-          {carData.map((car, index) => (
-            <div key={index} className="card my-3">
-              <div className="card-body">
-                <h2 className="card-text">{car.make}</h2>
-                <h5 className="card-text">{car.model}</h5>
-                <p className="card-text">Year: {car.year}</p>
-                <p className="card-text">MPG: {car.city_mpg}</p>
-                <p className="card-text">Drive: {car.drive}</p>
-                <p className="card-text">Cylinders: {car.cylinders}</p>
-                <p className="card-text">Car Class: {car.class}</p>
-                <p className="card-text">Fuel Type: {car.fuel_type}</p>
-              </div>
-            </div>
-          ))}
+  <div>
+    <h3>Car Results:</h3>
+    {carData.map((car, index) => (
+      <div key={index} className="card my-3">
+        <div className="card-body">
+          <h1 className="card-text text-center">{car.make}</h1>
+          <h2 className="card-text text-center">{car.model}</h2>
+          <p className="card-text">Year: {car.year}</p>
+          <p className="card-text">MPG: {car.city_mpg}</p>
+          <p className="card-text">Drive: {car.drive}</p>
+          <p className="card-text">Cylinders: {car.cylinders}</p>
+          <p className="card-text">Car Class: {car.class}</p>
+          <p className="card-text">Fuel Type: {car.fuel_type}</p>
         </div>
-      )}
+      </div>
+    ))}
+  </div>
+)}
     </div>
   );
 }

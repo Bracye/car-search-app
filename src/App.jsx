@@ -5,8 +5,8 @@ function App() {
 
   return (
     <>
-     <div>
-      <h1>Car Search App</h1>
+     <div >
+      <h1 className='text-center'>Car Search App</h1>
       <CarSearch />
      </div>
     </>
