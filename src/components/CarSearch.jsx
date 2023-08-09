@@ -42,7 +42,7 @@ function CarSearch() {
   };
 
   return (
-    <div className="container mt-5 pt-10 mx-auto" style={{ fontFamily: 'Staatliches, regular' }} >
+    <div className="container mt-5 pt-10 mx-auto" style={{ fontFamily: 'Staatliches, regular' }}>
       <div className="row justify-content-center mb-4">
         <div className="col-md-4">
           <input
