@@ -66,8 +66,8 @@ function CarSearch() {
           {carData.map((car, index) => (
             <div key={index} className="card my-3">
               <div className="card-body d-flex flex-column">
-                <h1 className="card-text text-center">{car.make}</h1>
-                <h2 className="card-text text-center">{car.model}</h2>
+                <h1 className="card-text text-center" style={{ fontFamily: 'Staatliches, cursive' }}>{car.make}</h1>
+                <h2 className="card-text text-center" style={{ fontFamily: 'Staatliches, cursive' }}>{car.model}</h2>
                 <div className="d-flex justify-content-between">
                   <p className="card-text">Year: {car.year}</p>
                   <p className="card-text">MPG: {car.city_mpg}</p>
