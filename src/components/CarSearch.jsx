@@ -66,19 +66,19 @@ function CarSearch() {
 
       {carData.length > 0 && (
         <div>
-          <h3>Car Results:</h3>
+          <h3 style={{ fontFamily: 'Staatliches, regular' }}>Car Results:</h3>
           {carData.map((car, index) => (
             <div key={index} className="card my-3">
-              <div className="card-body d-flex flex-column">
-                <h1 className="card-text text-center mb-3.5" style={{ fontFamily: 'Staatliches, regular' }}>{capitalizeFirstLetter(car.make)}</h1>
-                <h2 className="card-text text-center mb-5" style={{ fontFamily: 'Staatliches, regular' }}>{capitalizeFirstLetter(car.model)}</h2>
-                <div className="d-flex justify-content-between">
-                  <p className="card-text fs-5">Year: {car.year}</p>
-                  <p className="card-text fs-5">MPG: {car.city_mpg}</p>
-                  <p className="card-text fs-5">Drive: {capitalizeFirstLetter(car.drive)}</p>
-                  <p className="card-text fs-5">Cylinders: {car.cylinders}</p>
-                  <p className="card-text fs-5">Car Class: {capitalizeFirstLetter(car.class)}</p>
-                  <p className="card-text fs-5">Fuel Type: {capitalizeFirstLetter(car.fuel_type)}</p>
+              <div className="card-body d-flex flex-column" style={{ fontFamily: 'Staatliches, regular' }}>
+                <h1 className="card-text text-center mb-3.5" >{capitalizeFirstLetter(car.make)}</h1>
+                <h2 className="card-text text-center mb-5">{capitalizeFirstLetter(car.model)}</h2>
+                <div className="d-flex justify-content-between fs-5" >
+                  <p className="card-text">Year - {car.year}</p>
+                  <p className="card-text">MPG - {car.city_mpg}</p>
+                  <p className="card-text">Drive - {capitalizeFirstLetter(car.drive)}</p>
+                  <p className="card-text">Cylinders - {car.cylinders}</p>
+                  <p className="card-text">Car Class - {capitalizeFirstLetter(car.class)}</p>
+                  <p className="card-text">Fuel Type - {capitalizeFirstLetter(car.fuel_type)}</p>
                 </div>
               </div>
             </div>
