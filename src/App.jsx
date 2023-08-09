@@ -1,16 +1,13 @@
 import React from 'react'
 import CarSearch from './components/CarSearch'
 import Footer from './components/Footer'
+import Header from './components/Header'
 
 function App() {
 
   return (
     <div>
-    <header className="text-center py-4">
-        <h1 className="text-center" style={{ fontFamily: 'Staatliches, regular', textDecoration: 'underline' }}>
-          Car Search App
-        </h1>
-      </header>
+    <Header />
       <CarSearch />
       <Footer />
      </div>

@@ -85,6 +85,7 @@ function CarSearch() {
           ))}
         </div>
       )}
+     
     </div>
   );
 }
