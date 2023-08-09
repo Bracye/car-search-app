@@ -44,7 +44,7 @@ function CarSearch() {
   return (
     <div className="container mt-5 pt-10 mx-auto">
       <div className="row justify-content-center mb-4">
-        <div className="col-md-4">
+        <div className="col-md-4" style={{ fontFamily: 'Staatliches, regular' }}>
           <input
             type="text"
             value={make}
@@ -53,7 +53,7 @@ function CarSearch() {
             placeholder='Try "Ford"'
           />
         </div>
-        <div className="col-md-4">
+        <div className="col-md-4" style={{ fontFamily: 'Staatliches, regular' }}>
           <input
             type="text"
             value={model}
