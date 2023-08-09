@@ -71,14 +71,14 @@ function CarSearch() {
             <div key={index} className="card my-3">
               <div className="card-body d-flex flex-column">
                 <h1 className="card-text text-center mb-3.5" style={{ fontFamily: 'Staatliches, regular' }}>{capitalizeFirstLetter(car.make)}</h1>
-                <h2 className="card-text text-center" style={{ fontFamily: 'Staatliches, regular' }}>{capitalizeFirstLetter(car.model)}</h2>
+                <h2 className="card-text text-center mb-5" style={{ fontFamily: 'Staatliches, regular' }}>{capitalizeFirstLetter(car.model)}</h2>
                 <div className="d-flex justify-content-between">
-                  <p className="card-text">Year: {car.year}</p>
-                  <p className="card-text">MPG: {car.city_mpg}</p>
-                  <p className="card-text">Drive: {car.drive}</p>
-                  <p className="card-text">Cylinders: {car.cylinders}</p>
-                  <p className="card-text">Car Class: {car.class}</p>
-                  <p className="card-text">Fuel Type: {car.fuel_type}</p>
+                  <p className="card-text fs-5">Year: {car.year}</p>
+                  <p className="card-text fs-5">MPG: {car.city_mpg}</p>
+                  <p className="card-text fs-5">Drive: {capitalizeFirstLetter(car.drive)}</p>
+                  <p className="card-text fs-5">Cylinders: {car.cylinders}</p>
+                  <p className="card-text fs-5">Car Class: {capitalizeFirstLetter(car.class)}</p>
+                  <p className="card-text fs-5">Fuel Type: {capitalizeFirstLetter(car.fuel_type)}</p>
                 </div>
               </div>
             </div>
