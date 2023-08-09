@@ -37,6 +37,10 @@ function CarSearch() {
     }
   };
 
+  const capitalizeFirstLetter = (text) => {
+    return text.charAt(0).toUpperCase() + text.slice(1);
+  };
+
   return (
     <div className="container mt-5 pt-10 mx-auto">
       <div className="row justify-content-center mb-4">
@@ -66,8 +70,8 @@ function CarSearch() {
           {carData.map((car, index) => (
             <div key={index} className="card my-3">
               <div className="card-body d-flex flex-column">
-                <h1 className="card-text text-center" style={{ fontFamily: 'Staatliches, cursive' }}>{car.make}</h1>
-                <h2 className="card-text text-center" style={{ fontFamily: 'Staatliches, cursive' }}>{car.model}</h2>
+                <h1 className="card-text text-center mb-3.5" style={{ fontFamily: 'Staatliches, regular' }}>{capitalizeFirstLetter(car.make)}</h1>
+                <h2 className="card-text text-center" style={{ fontFamily: 'Staatliches, regular' }}>{capitalizeFirstLetter(car.model)}</h2>
                 <div className="d-flex justify-content-between">
                   <p className="card-text">Year: {car.year}</p>
                   <p className="card-text">MPG: {car.city_mpg}</p>
