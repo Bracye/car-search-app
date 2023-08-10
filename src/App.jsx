@@ -1,16 +1,22 @@
 import React from 'react'
-import CarSearch from './components/CarSearch'
-import MotorcycleSearch from './components/MotorcycleSearch'
+import { Route, Routes } from "react-router-dom";
+import CarSearch from './pages/CarSearch'
+import MotorcycleSearch from './pages/MotorcycleSearch'
+import Main from './pages/Main';
 import Footer from './components/Footer'
 import Header from './components/Header'
 
 function App() {
 {/* Displays */}
   return (
+   
     <div>
       <Header />
-      <CarSearch />
-      <MotorcycleSearch />
+       <Routes>
+      <Route path='/' element={<Main />} />
+       <Route path='/Cars/' element={<CarSearch />} />
+      <Route path='/Motorcycles' element={<MotorcycleSearch />} />
+      </Routes>
       <Footer />
      </div>
   )
