@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Header() {
+  //Header with title and nav links styled with flex 
   return (
     <header className="bg-light py-3 "  style={{ textAlign: 'center', fontFamily: 'Staatliches, sans-serif' }}>
       <div className="container d-flex justify-content-between align-items-center">

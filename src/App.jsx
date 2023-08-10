@@ -1,3 +1,4 @@
+//
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import CarSearch from './pages/CarSearch';
@@ -8,6 +9,7 @@ import Header from './components/Header';
 
 function App() {
   return (
+    //All components in order displayed
     <div>
       <Header />
       <Routes>

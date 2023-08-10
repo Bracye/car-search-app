@@ -1,15 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+//Use State for make and model search bars to get car specs
 function MotorcycleSearch() {
   const [make, setMake] = useState('');
   const [model, setModel] = useState('');
   const [motorcycleData, setMotorcycleData] = useState([]);
 
+  //Use Effect to populate the results as info is typed in
   useEffect(() => {
     fetchData();
   }, [make, model]);
 
+
+    //Motorcycle from RapidAPI fetching data with axios
   const fetchData = async () => {
     const options = {
       method: 'GET',
@@ -24,6 +28,7 @@ function MotorcycleSearch() {
       },
     };
 
+    //Try and catch method to test the api 
     try {
       const response = await axios.request(options);
       setMotorcycleData(response.data);
@@ -32,10 +37,12 @@ function MotorcycleSearch() {
     }
   };
 
+  //Function to be used on lowercase info to update with uppercase
   const capitalizeFirstLetter = (text) => {
     return text.charAt(0).toUpperCase() + text.slice(1);
   };
 
+   //Renderrrrrr
   return (
     <div className="container mt-5 pt-10 mx-auto" style={{ fontFamily: 'Staatliches, regular' }}>
       <div className="row justify-content-center mb-4">
@@ -68,6 +75,10 @@ function MotorcycleSearch() {
                 <h2 className="card-text text-center mb-5">{capitalizeFirstLetter(motorcycle.model)}</h2>
                 <div className="d-flex justify-content-between fs-5">
                   <p className="card-text">Year - {motorcycle.year}</p>
+                  <p className="card-text">Type - {motorcycle.type}</p>
+                  <p className="card-text">Engine - {motorcycle.engine}</p>
+                  <p className="card-text">Power - {motorcycle.power}</p>
+                  <p className="card-text">Torque - {motorcycle.torque}</p>
                   
                 </div>
               </div>
