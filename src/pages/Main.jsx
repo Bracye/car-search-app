@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Main() {
   return (
-    <div>Main</div>
-  )
+    <div>
+      <Link to="/cars">Car Search</Link>
+      <Link to="/motorcycles">Motorcycle Search</Link>
+    </div>
+  );
 }
 
-export default Main
+export default Main;
