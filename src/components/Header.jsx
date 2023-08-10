@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <header className="bg-dark text-light p-3">
+    <header className="bg-light text-light p-3">
       <div className="container d-flex justify-content-between align-items-center">
         <h1>Vehicle Search App</h1>
         <nav>

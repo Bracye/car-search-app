@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootswatch/dist/cyborg/bootstrap.min.css'
+
 
 //Use State for make and model search bars to get car specs
 function CarSearch() {
