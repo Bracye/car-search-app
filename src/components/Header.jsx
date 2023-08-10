@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <header className="bg-light text-light p-3">
+    <header className="bg-light py-3 "  style={{ textAlign: 'center', fontFamily: 'Staatliches, sans-serif' }}>
       <div className="container d-flex justify-content-between align-items-center">
-        <h1>Vehicle Search App</h1>
+        <h1 className='text-dark'>Vehicle Search App</h1>
         <nav>
           <ul className="list-inline mb-0">
-            <li className="list-inline-item"><Link to="/">Home</Link></li>
-            <li className="list-inline-item"><Link to="/cars">Cars</Link></li>
-            <li className="list-inline-item"><Link to="/motorcycles">Motorcycles</Link></li>
+            <li className="list-inline-item fs-4" ><Link to="/" className='text-dark text-decoration-none'>Home</Link></li>
+            <li className="list-inline-item fs-4"><Link to="/cars" className='text-dark text-decoration-none'>Cars</Link></li>
+            <li className="list-inline-item fs-4"><Link to="/motorcycles" className='text-dark text-decoration-none'>Motorcycles</Link></li>
           </ul>
         </nav>
       </div>

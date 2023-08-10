@@ -45,7 +45,7 @@ function MotorcycleSearch() {
             value={make}
             onChange={(e) => setMake(e.target.value)}
             className="form-control"
-            placeholder='Try "Kawasaki"'
+            placeholder='Try "Harley-Davidson"'
           />
         </div>
         <div className="col-md-4">
@@ -54,7 +54,7 @@ function MotorcycleSearch() {
             value={model}
             onChange={(e) => setModel(e.target.value)}
             className="form-control"
-            placeholder='Try "Ninja"'
+            placeholder='Try "Sportster"'
           />
         </div>
       </div>
