@@ -5,13 +5,11 @@ import MotorcycleSearch from './pages/MotorcycleSearch';
 import Main from './pages/Main';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import Nav from './components/Nav';
 
 function App() {
   return (
     <div>
       <Header />
-      <Nav />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/cars/" element={<CarSearch />} />
