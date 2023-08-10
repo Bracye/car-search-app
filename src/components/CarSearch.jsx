@@ -3,15 +3,18 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootswatch/dist/cyborg/bootstrap.min.css'
 
+//Use State for make and model search bars to get car specs
 function CarSearch() {
   const [make, setMake] = useState('');
   const [model, setModel] = useState('');
   const [carData, setCarData] = useState([]);
 
+  //Use Effect to populate the results as info is typed in
   useEffect(() => {
     fetchData();
   }, [make, model]);
 
+  //CarAPI from RapidAPI fetching data with axios
   const fetchData = async () => {
     const options = {
       method: 'GET',
@@ -28,6 +31,7 @@ function CarSearch() {
 
     console.log('API Request Options:', options);
 
+    //Try and catch method to test the api 
     try {
       const response = await axios.request(options);
       console.log('API Response:', response.data);
@@ -37,13 +41,18 @@ function CarSearch() {
     }
   };
 
+  //Function to be used on lowercase info to update with uppercase
   const capitalizeFirstLetter = (text) => {
     return text.charAt(0).toUpperCase() + text.slice(1);
   };
 
+  //Renderrrrrr
   return (
+    // Styling the entire div and adding google fonts
     <div className="container mt-5 pt-10 mx-auto" style={{ fontFamily: 'Staatliches, regular' }}>
+      {/* //Getting the content in the center */}
       <div className="row justify-content-center mb-4">
+        {/* //Two inputs for make and model */}
         <div className="col-md-4">
           <input
             type="text"
@@ -63,7 +72,7 @@ function CarSearch() {
           />
         </div>
       </div>
-
+   
       {carData.length > 0 && (
         <div>
           <h3>Car Results:</h3>
