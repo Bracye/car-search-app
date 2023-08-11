@@ -1,11 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import tireImage from '../images/tire.png';
+import './Main.css'; // Make sure to adjust the path based on your file structure
 
 function Main() {
   return (
     <div style={{ textAlign: 'center', fontFamily: 'Staatliches, sans-serif' }}>
-      <img src={tireImage} alt="Tire Image" style={{ maxWidth: '400px', height: 'auto', margin: '40px' }} />
+      <img
+        src={tireImage}
+        alt="Tire Image"
+        className="spinning"
+        style={{ maxWidth: '400px', height: 'auto', margin: '40px' }}
+      />
       <h2 className='mb-5 py-4 fs-1'>This app allows you to search for vehicles based on make and model.</h2>
       <h3 className='fs-2'>Start searching with the following options:</h3>
       <div className="d-flex justify-content-center">
