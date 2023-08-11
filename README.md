@@ -14,9 +14,9 @@ This project is an submission for my Software Engineering class for a Module 2 f
 
 ## Installation
 
-- Clone the repository: git clone https://github.com/your-username/vehicle-search-app.git
+- Clone the repository: git clone https://github.com/Bracye/vehicle-search-app.git
 
-- Get to the project folder: cd vehiccle-search-app
+- Get to the project folder: cd vehicle-search-app
 
 - Install: npm install
 
