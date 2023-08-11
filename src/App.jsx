@@ -1,4 +1,3 @@
-//
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import CarSearch from './pages/CarSearch';
@@ -9,8 +8,7 @@ import Header from './components/Header';
 
 function App() {
   return (
-    //All components in order displayed
-    <div>
+    <div className="app-container" style={{maxWidth: '1200px', margin: '0 auto', padding: '10px' }}>
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />

@@ -9,9 +9,9 @@ function Header() {
         <h1 className='text-dark'>Vehicle Search App</h1>
         <nav>
           <ul className="list-inline mb-0">
-            <li className="list-inline-item fs-4" ><Link to="/" className='text-dark text-decoration-none'>Home</Link></li>
-            <li className="list-inline-item fs-4"><Link to="/cars" className='text-dark text-decoration-none'>Cars</Link></li>
-            <li className="list-inline-item fs-4"><Link to="/motorcycles" className='text-dark text-decoration-none'>Motorcycles</Link></li>
+            <li className="list-inline-item fs-2" ><Link to="/" className='text-dark text-decoration-none'>Home</Link></li>
+            <li className="list-inline-item fs-2"><Link to="/cars" className='text-dark text-decoration-none'>Cars</Link></li>
+            <li className="list-inline-item fs-2"><Link to="/motorcycles" className='text-dark text-decoration-none'>Motorcycles</Link></li>
           </ul>
         </nav>
       </div>
