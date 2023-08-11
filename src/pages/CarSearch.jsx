@@ -33,10 +33,10 @@ function CarSearch() {
     //Try and catch method to test the api 
     try {
       const response = await axios.request(options);
-      console.log('API Response:', response.data);
+      console.log('Response:', response.data);
       setCarData(response.data);
     } catch (error) {
-      console.error('API Error:', error);
+      console.error('Error:', error);
     }
   };
 

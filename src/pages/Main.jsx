@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-import tireImage from '../images/tire.png'; // Use the relative path
+import tireImage from '../images/tire.png';
 
 function Main() {
   return (
