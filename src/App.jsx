@@ -8,7 +8,7 @@ import Header from './components/Header';
 
 function App() {
   return (
-    <div className="app-container" style={{maxWidth: '1200px', margin: '0 auto', boxShadow: '0 0 10px rgba(0, 0, 0, 0.8)'}}>
+    <div style={{maxWidth: '1200px', margin: '0 auto', boxShadow: '0 0 10px rgba(0, 0, 0, 0.8)'}}>
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />

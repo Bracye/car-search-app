@@ -10,7 +10,11 @@ function CarSearch() {
 
   //Use Effect to populate the results as info is typed in
   useEffect(() => {
-    fetchData();
+    if (!make && !model) {
+      setCarData([]);
+    } else {
+      fetchData();
+    }
   }, [make, model]);
 
   //CarAPI from RapidAPI fetching data with axios

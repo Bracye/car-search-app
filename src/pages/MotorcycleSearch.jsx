@@ -9,7 +9,11 @@ function MotorcycleSearch() {
 
   //Use Effect to populate the results as info is typed in
   useEffect(() => {
-    fetchData();
+    if (!make && !model) {
+      setMotorcycleData([]);
+    } else {
+      fetchData();
+    }
   }, [make, model]);
 
 
